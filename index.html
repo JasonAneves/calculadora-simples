@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <title>Calculardora</title>
+  </head>
+  <body>
+    <h1>Calculadora simples</h1>
+    Primeiro número <br />
+    <input id="n1" type="number "  /><br />
+    Segundo número<br />
+    <input id="n2" type="number " /><br /><br />
+    <button class="btn btn-primary" onclick="Somar()">+</button>
+    <button class="btn btn-danger" onclick="Subtrair()">-</button>
+    <button class="btn btn-success" onclick="Multiplicar()">X</button>
+    <button class="btn btn-secondary" onclick="Dividir()">/</button>
+  
+    <br />
+    <hr />
+    Resultado = <span></span>
+
+    <script>
+      var n1 = document.querySelector("#n1");
+      var n2 = document.querySelector("#n2");
+      var resultado = document.querySelector("span");
+
+      function Somar() {
+        resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value);
+      }
+      function Subtrair() {
+        resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value);
+      }
+      function Multiplicar() {
+        resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value);
+      }
+      function Dividir() {
+        resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value);
+      }
+    </script>
+  </body>
+
+  <style></style>
+</html>
